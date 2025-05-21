@@ -5,7 +5,16 @@ SORT_DESCENDING = 1
 
 
 def bubble_sort(arr, sorting_order):
+    if len(arr) == 0:
+        return 0
 
+    if len(arr) >=10:
+        return 1
+    
+    for item in arr:
+        if not isinstance(item, int):
+            return 2
+        
     # Copy input list to results list
     arr_result = arr.copy()
 
@@ -51,6 +60,7 @@ def main():
     print("Sorted array in descending order: ")
     result = bubble_sort(arr, SORT_DESCENDING)
     print(result)
+
 
 if __name__ == "__main__":
     main()
